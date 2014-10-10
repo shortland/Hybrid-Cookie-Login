@@ -20,20 +20,6 @@ $method_safe = addslashes($method);
 $b64_username = base64_encode($username_safe);
 $b64_password = base64_encode($password_safe);
 
-/*
-// Bad Idea to put this here, commented out...
-if (isset($uc_safe) && isset($pc_safe)){
-// echo "Attempting to login.";
-include 'cookie_login.php';
-// AFTER THIS POINT YOU ARE COOKIE LOGGED IN ADD IN MEMBER-ONLY CONTENT BELLOW, UP UNTIL die();
-
-echo "Logged in, Private registered user content only here."; // just a message saying that we are really logged in (through cookies)
-
-// up until here cookie safe.
-die();
-}
-*/
-
 if (!isset($_POST["method"]) && empty($_POST["method"])) {
 echo "<form action='login.php' method='post'>\n";
 echo "Username: <input type='text' name='username'/><br>\n";
