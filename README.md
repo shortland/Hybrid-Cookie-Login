@@ -12,8 +12,8 @@ Unlike most other PHP-Cookie logins, this one stores cookie information in the d
 
   <h3>Problems:</h3>
   
-  - Bruteforcing the cookies is a "possibility" at their current (short) length.
-  - Increasing length can help solve this issue.
+  - Bruteforcing is a possibility, though it's extremely difficult for one to do as the U_Cookie and P_Cookie are random and change every time you re-login.
+  - Increasing cookie length can ensure more security.
 
   <h3>Planned:</h3>
   
