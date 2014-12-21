@@ -11,7 +11,7 @@
 // Go ahead and set more variables by fetching more stuff from DB
 
 if(!isset($_COOKIE['u_cookie']) && !isset($_COOKIE['p_cookie'])){
-echo "<form action='index.php' method='post'>\n";
+echo "<form action='login.php' method='post'>\n";
 echo "Username: <input type='text' name='username'/><br>\n";
 echo "Password: <input type='password' name='password'/><br>\n";
 echo "<input type='hidden' name='method' value='login'/>\n";
@@ -41,7 +41,7 @@ while($row = mysqli_fetch_array($check)) {
 if (!isset($valid)){
 // Invalid, old, currupt cookies
 // Force user to login again.
-echo "<form action='index.php' method='post'>\n";
+echo "<form action='login.php' method='post'>\n";
 echo "Username: <input type='text' name='username'/><br>\n";
 echo "Password: <input type='password' name='password'/><br>\n";
 echo "<input type='hidden' name='method' value='login'/>\n";
