@@ -68,9 +68,9 @@ mysqli_query($connect, "UPDATE `users` SET `u_cookie` = '$u_cookie', `p_cookie` 
 setcookie("u_cookie", $u_cookie);
 setcookie("p_cookie", $p_cookie);
 
-
-echo "Logging in";
 header('Location: private.php');
+echo "Logging in";
+
 
 mysqli_close($connect);
 die(); // die anyways
