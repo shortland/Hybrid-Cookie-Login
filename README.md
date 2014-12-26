@@ -1,9 +1,9 @@
 <h2>This project has been renamed to 'hybrid-cookie-login' :D</h2>
-Originally this project was meant to be a simple php cookie script login, although with my other private projects; I run into issues where I'm using PHP here, Perl there and a bunch of languages all together...
+Originally this project was meant to be a simple php cookie script login (it still is!), although with my other private projects; I run into issues where I'm using a little PHP here, and a little Perl there ect... When doing so, typically cookies aren't shared between the pages (because of the different languages).
 
-The aim of this project will be for a user's cookies to be easily transfered between pages that are not of the same language (php & perl). Basically have multiple versions of 'cookie_login.php' though in different web CGI languages (perl, python...).
+The aim of this project will be for a user's cookies to be easily used across pages that are not of the same language (php & perl). Basically have multiple versions of 'cookie_login.php' though in different web CGI languages (perl, python...). The user would originally login through login.php, although the multiple-langual 'cookie_login' scripts would allow a user to remain 'logged in' across a server, througought differing language scripts!
 
-Currently, in one of my private projects I'm testing out 'cookie_login.pl' along with the '.php' files in this project, so far its working out great! Once I get most of the bugs worked out & clean up the code I'll post it up here, and grow the hybrid cookie login :D
+
 
 Unlike most other Web Cookie logins, this one stores cookie information in the database rather than in a file. Cookies will also be shared between pages of not the same language type (.pl, .py, .php...), these pages would share cookies between one another in a simple fashion.
   
@@ -24,6 +24,7 @@ Unlike most other Web Cookie logins, this one stores cookie information in the d
   - Increasing cookie length would help with security.
 
   <h3>Planned:</h3>
+  - Add Python support :D (.py)
   
   - Temporarily block IP (for X minutes) if (X) failed cookie attempts are made with different cookie values.
   - (won't block if user is repeatedly failing to login with same cookie).
