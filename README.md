@@ -13,6 +13,16 @@ Unlike most other Web Cookie logins, this one stores cookie information in the d
   - U_Cookie and P_Cookie are reset each time the user does a manual login (changes devices). 
   - This restricts the user to only be logged in on one (device/browser) at a time.
   - Most data that is entered into Database is base64_encoded, which removes the chances of SQLi.
+  
+  <h3>Perl Modules:</h3>
+- ```use CGI;```
+- Standard for CGI web pages in Perl.
+- ```use CGI::Cookie;```
+- Necessary for Perl Web Cookies
+- ``` use MIME::Base64;```
+- Used for cleaning inputs, same as in PHP.
+- ``` use DBI;```
+- Used for connecting to database.
 
   <h3>Suggested:</h3>
   
