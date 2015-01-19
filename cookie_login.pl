@@ -30,8 +30,8 @@ BEGIN{
         if($method =~ "set"){
             $read_u_cookie = $q->param("u_cookie");
             $read_p_cookie = $q->param("p_cookie");
-            $u_cookie = new CGI::Cookie(-name=>'u_cookie',-value=>$read_u_cookie);
-            $p_cookie = new CGI::Cookie(-name=>'p_cookie',-value=>$read_p_cookie);
+            $u_cookie = new CGI::Cookie(-name=>'u_cookie',-value=>$read_u_cookie,-path='/');
+            $p_cookie = new CGI::Cookie(-name=>'p_cookie',-value=>$read_p_cookie,-path='/');
             $url = "cookie_login.pl";
             print $q->header(-Location=>$url,-cookie=>[$u_cookie, $p_cookie],-type=>'text/html', -charset => 'UTF-8');
         } else {
