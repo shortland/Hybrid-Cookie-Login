@@ -19,7 +19,7 @@ echo "<input type='hidden' name='method' value='register'/>\n";
 echo "<input type='submit' value='Register'/><br>\n";
 echo "</form>\n";
 die();
-} elseif ($method == "register"){
+} elseif ($method_safe == "register"){
 function randomString($length = 24) { // String used for cookie.
     $characters = '1234567890poiuytrewqasdfghjklmnbvcxzQAZWSXEDCRFVTGBYHNUJMIKLOP';
     $String = '';
