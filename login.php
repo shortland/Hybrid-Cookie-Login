@@ -1,13 +1,13 @@
 <?php
-$username_safe = addslashes($_GET['username']);
-$password_safe = addslashes($_GET['password']);
+$username_safe = addslashes($_POST['username']);
+$password_safe = addslashes($_POST['password']);
 
-$method_safe = addslashes($_GET['method']);
+$method_safe = addslashes($_POST['method']);
 
-$b64_username = base64_encode(addslashes($_GET['username']));
-$b64_password = base64_encode(addslashes($_GET['password']));
+$b64_username = base64_encode(addslashes($_POST['username']));
+$b64_password = base64_encode(addslashes($_POST['password']));
 
-if (!isset($_GET["method"]) && empty($_GET["method"])) {
+if (!isset($_POST["method"]) && empty($_POST["method"])) {
 echo "<form action='login.php' method='GET'>\n";
 echo "Username: <input type='text' name='username'/><br>\n";
 echo "Password: <input type='password' name='password'/><br>\n";
