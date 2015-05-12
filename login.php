@@ -1,6 +1,6 @@
 <?php
-$uc_safe = addslashes($_COOKIE['u_cookie'];);
-$pc_safe = addslashes($_COOKIE['p_cookie'];);
+$uc_safe = addslashes($_COOKIE['u_cookie']);
+$pc_safe = addslashes($_COOKIE['p_cookie']);
 
 $username_safe = addslashes($_POST['username']);
 $password_safe = addslashes($_POST['password']);
