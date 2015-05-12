@@ -1,23 +1,21 @@
 <?php
-$uc_safe = addslashes($_COOKIE['u_cookie']);
-$pc_safe = addslashes($_COOKIE['p_cookie']);
+$username_safe = addslashes($_GET['username']);
+$password_safe = addslashes($_GET['password']);
 
-$username_safe = addslashes($_POST['username']);
-$password_safe = addslashes($_POST['password']);
-$method_safe = addslashes($_POST['method']);
+$method_safe = addslashes($_GET['method']);
 
-$b64_username = base64_encode(addslashes($_POST['username']));
-$b64_password = base64_encode(addslashes($_POST['password']));
+$b64_username = base64_encode(addslashes($_GET['username']));
+$b64_password = base64_encode(addslashes($_GET['password']));
 
-if (!isset($_POST["method"]) && empty($_POST["method"])) {
-echo "<form action='login.php' method='post'>\n";
+if (!isset($_GET["method"]) && empty($_GET["method"])) {
+echo "<form action='login.php' method='GET'>\n";
 echo "Username: <input type='text' name='username'/><br>\n";
 echo "Password: <input type='password' name='password'/><br>\n";
 echo "<input type='hidden' name='method' value='login'/>\n";
 echo "<input type='submit' value='Login'/><br>\n";
 echo "</form>\n";
 die();
-} elseif ($method == "login"){
+} elseif ($method_safe == "login"){
 function randomString($length = 24) {
     $characters = '1234567890poiuytrewqasdfghjklmnbvcxzQAZWSXEDCRFVTGBYHNUJMIKLOP';
     $String = '';
