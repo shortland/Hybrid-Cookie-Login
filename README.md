@@ -2,7 +2,8 @@
 
 #Barebones Perl CGI Login Script
   
-  <h3>Perl Modules:</h3>
+<h3>Perl Modules:</h3>
+
 ```perl
 # for CGI capability of Perl
 use CGI;
@@ -25,10 +26,10 @@ use YAML::XS qw(LoadFile);
 use Crypt::PBKDF2;
 ```
 
-  <h3>Issues:</h3>
-  - Brute force is nearly impossible; but still possible as any system is vulnerable to bruteforce. This login system DOES NOT include a CAPTCHA system. (planned)
+<h3>Issues:</h3>
+- Brute force is nearly impossible; but still possible as any system is vulnerable to bruteforce. This login system DOES NOT include a CAPTCHA system. (planned)
 
-  <h3>Planned:</h3>
-  - Add captcha for registering and for logging in after (X) failed login attempts.
-  - Temporarily block IP (for X minutes) if (X) failed cookie attempts are made with different cookie values.
-  - (won't block if user is repeatedly failing to login with same cookie).
+<h3>Planned:</h3>
+- Add captcha for registering and for logging in after (X) failed login attempts.
+- Temporarily block IP (for X minutes) if (X) failed cookie attempts are made with different cookie values.
+- (won't block if user is repeatedly failing to login with same cookie).
