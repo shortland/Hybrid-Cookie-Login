@@ -1,6 +1,5 @@
 <h2>Hybrid Cookie Login</h2>
-
-#Barebones Perl CGI Login Script
+A simple, safe, barebones Perl CGI login script
   
 <h3>Perl Modules:</h3>
 
