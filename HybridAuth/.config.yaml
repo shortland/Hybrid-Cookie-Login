@@ -1,0 +1,7 @@
+---
+sql:
+    host: localhost
+    db: forum
+    table: users
+    user: root
+    pass: password

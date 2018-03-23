@@ -1,0 +1,14 @@
+RewriteEngine On
+RewriteBase /
+
+<Files '.config.yaml'>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<FilesMatch "\.pm$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+Options All -Indexes

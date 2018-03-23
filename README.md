@@ -1,33 +1,32 @@
 <h2>Hybrid Cookie Login</h2>
 
-
-<h1 style='color:red'>WARNING: There are many conflicting errors with these scripts... I'm working on recoding them all from scratch.</h1>
-
-
-Originally this project was meant to be a simple PHP cookie script login (it still is!), although with my other private projects; I run into issues where I'm using a little PHP here, and a little Perl (CGI) there ect...
-
-The aim of this project is to make a Login, and Register system working in both PHP and Perl. So people may use this script for their Perl project, or maybe their PHP project. (Even both... I use these scripts for some of my projects collaboratively.
-
-Unlike most other Web Cookie logins, this one stores cookie information in a database rather than in an server file.
-  
-  - Most data in the database is simply base64_encoded, not for any specific reason other than to clean up SQL inputs.
-  - Password Encryption is not base64 encrypted, rather a once way, irreversible (safe) method.
-  - U_Cookie and P_Cookie are basically a "username & password" to get access to the database.
+#Barebones Perl CGI Login Script
   
   <h3>Perl Modules:</h3>
-- ```use CGI;```
-- Standard for CGI web pages in Perl.
-- ```use CGI::Cookie;```
-- Necessary for Perl Web Cookies
-- ``` use MIME::Base64;```
-- Used for cleaning inputs, same as in PHP.
-- ``` use DBI;```
-- Used for connecting to database.
+```perl
+# for CGI capability of Perl
+use CGI;
+# for setting cookies in browser
+use CGI::Cookie;
+# for giving browser/client messages
+use JSON;
+# for connecting to mysql database
+use DBI;
+# for creating browser cookies
+use String::Random;
+# for the custom modules in directory "HybridAuth"
+use Exporter qw(import);
+use File::Basename qw(dirname);
+use Cwd qw(abs_path);
+use lib;
+# for sql config file (".config.yaml")
+use YAML::XS qw(LoadFile);
+# for password hashing
+use Crypt::PBKDF2;
+```
 
   <h3>Issues:</h3>
   - Brute force is nearly impossible; but still possible as any system is vulnerable to bruteforce. This login system DOES NOT include a CAPTCHA system. (planned)
-  - Bruteforcing is a tiny possibility, it'd be extremely difficult for one to do, as the U_Cookie and P_Cookie are random and change every time you re-login, as-well as that the 'hacker' would need to have both u_cookie and p_cookie simultaneously.
-  - Increasing cookie length could help with security.
 
   <h3>Planned:</h3>
   - Add captcha for registering and for logging in after (X) failed login attempts.
